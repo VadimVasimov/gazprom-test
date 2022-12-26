@@ -55,6 +55,7 @@
     ```
     Либо запустить скрипт **/local/php_interface/migrations/fill_offices_iblock.php** через консоль
 
+3. Раздел с картой офисов на сайте - /offices/ (пример: https://cv48830-bitrix-1e1ki.tw1.ru/offices/)
 ---
 
 ## Пояснения по выполнению задания:
