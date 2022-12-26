@@ -17,10 +17,10 @@
 ## Инструкция:
 1. Запустить миграцию создания инфоблока офисов в Битрикс PHP (Настройки => Инструменты => Командная PHP-строка):
     ```
-    CBitrixComponent::includeComponentClass("gazprom:offices");
+    CBitrixComponent::includeComponentClass('gazprom:offices');
     $component = new \Offices();
     
-    $iblockId = $component->getOfficesInfoBlockId();
+    $iblockId = $component->addOfficesInfoBlockIfNotExist();
     
     if ($iblockId) {
         echo 'ID инфоблока: ' . $iblockId;
@@ -32,7 +32,7 @@
 
 2. Запустить миграцию заполнения инфоблока офисов в Битрикс PHP (Настройки => Инструменты => Командная PHP-строка):
     ```
-    CBitrixComponent::includeComponentClass("gazprom:offices");
+    CBitrixComponent::includeComponentClass('gazprom:offices');
     $component = new \Offices();
     
     $iblockId = $component->getOfficesInfoBlockId();
@@ -58,6 +58,6 @@
 ---
 
 ## Пояснения по выполнению задания:
-1. Задание было выполнено на чистой копии 1С-Битрикс в редакции Старт;
+1. Задание было выполнено на чистой копии 1С-Битрикс в редакции Старт, адаптивный шаблон "Сайт услуг" (corp_services_blue);
 2. Все методы по работе с инфоблоком офисов вынесены в класс компонента, в реальном проекте эти методы лучше выносить в отдельный класс для работы с инфоблоками;
 3. В реальном проекте миграции лучше реализовывать через модуль [Миграции для разработчиков](https://marketplace.1c-bitrix.ru/solutions/sprint.migration/).

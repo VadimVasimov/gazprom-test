@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             zoom: 10,
             controls: ['smallMapDefaultSet', 'mediumMapDefaultSet', 'largeMapDefaultSet']
         }, {
+            autoFitToViewport: 'always',
             searchControlProvider: 'yandex#search'
         });
 
